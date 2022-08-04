@@ -1,19 +1,7 @@
-#spring:
-#  profiles:
-#    active: dev
-twitter-app:
-  bearer-token:
-  twitter-stream-url: https://api.twitter.com/2/tweets/search/stream
-  fields:
-    - created_at
-    - public_metrics
-  expansions:
-    - author_id
-  keywords:
-    - Java
-    - Spring Boot
-    - Berker
-    - Turkey
+spring:
+  profiles:
+    active: "dev"
+
 retry-config:
   initial-interval-ms: 1000
   max-interval-ms: 10000
@@ -31,16 +19,6 @@ kafka-config:
   num-of-partitions: 3
   replication-factor: 3
 
-kafka-producer-config:
-  key-serializer-class: org.apache.kafka.common.serialization.LongSerializer
-  value-serializer-class: io.confluent.kafka.serializers.KafkaAvroSerializer
-  compression-type: snappy
-  acks: all
-  batch-size: 16384
-  batch-size-boost-factor: 100
-  linger-ms: 5
-  request-timeout-ms: 60000
-  retry-count: 5
 kafka-consumer-config:
   key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
   value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
@@ -58,13 +36,9 @@ kafka-consumer-config:
   max-partition-fetch-bytes-default: 1048576
   max-partition-fetch-bytes-boost-factor: 1
   poll-timeout-ms: 150
+
 elastic-config:
   index-name: twitter-index
   connection-url: http://localhost:9200
   connect-timeout-ms: 5000
   socket-timeout-ms: 30000
-management:
-  health:
-    elasticsearch:
-      enabled:
-        -false
