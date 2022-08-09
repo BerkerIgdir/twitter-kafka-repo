@@ -2,7 +2,7 @@
 #  profiles:
 #    active: "dev"
 twitter-app:
-  bearer-token: "(cipher)a48b542f4c36bb6ad79f5b3bd3642afbf52f10d713543966fb8ab282fe7c263e"
+  bearer-token: "(cipher)44d2deba5b3c3512f380810f8b1ad2123a01c6a2407fc86d50ea27d5cb37cc604983fd8631f17480bdccade9c024e3353de2a6e19d5e9cddabdf88340543e4a1a6ecdbc508500f5968e0a0f66c25670c8761cca4ffa023373728bf3709200e56eea6f4eb0096f213c3fc495231ea3787faf1e33acebc7206459470408c6a50b8407d6a71b5cba3406a352ec8610ff22c"
   twitter-stream-url: https://api.twitter.com/2/tweets/search/stream
   fields:
     - created_at
