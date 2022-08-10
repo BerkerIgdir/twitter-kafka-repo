@@ -9,7 +9,7 @@ retry-config:
   maxAttempts: 5
   sleep-time-ms: 2000
 
-kafka-config:
+kafka-config-prop:
   bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
   schema-registry-url-key: schema.registry.url
   schema-registry-url: http://localhost:8081
