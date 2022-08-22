@@ -7,3 +7,10 @@ user-config:
   username: test
   pass: "{cipher}0e22aa34a4c7a50a3f0192cc9b6a218b196a490e556d50d501621596a6ec9dc3"
   roles: USER
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9091/auth/realms/microservices-realm
+          jwk-set-uri: http://localhost:9091/auth/realms/microservices-realm/protocol/openid-connect/certs
